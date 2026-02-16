@@ -35,7 +35,7 @@ function HomePage() {
             </form>
 
             <div className="mt-4 flex justify-center">
-              <Button href="/watch_shorts" text="Watch Shorts 👀" className="bg-yellow-900 hover:bg-yellow-800 focus:ring-yellow-900" />
+              <Button href="/watch_shorts" text="Watch Shorts 👀" className="hidden md:inline-flex items-center rounded-lg bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-100" />
             </div>
           </div>
         </section>
