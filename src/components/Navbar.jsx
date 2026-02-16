@@ -142,7 +142,7 @@ export default function Navbar(props) {
                 className={({ isActive }) =>
                   [
                     'block rounded-lg px-3 py-2 text-base font-medium transition-colors',
-                    isActive ? 'bg-red-900 text-white dark:bg-red-800 dark:text-white' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
+                    isActive ? 'nav-active' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
                   ].join(' ')
                 }
               >
@@ -156,7 +156,7 @@ export default function Navbar(props) {
                 className={({ isActive }) =>
                   [
                     'block rounded-lg px-3 py-2 text-base font-medium transition-colors',
-                    isActive ? 'bg-red-900 text-white dark:bg-red-800 dark:text-white' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
+                    isActive ? 'nav-active' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
                   ].join(' ')
                 }
               >
@@ -170,7 +170,7 @@ export default function Navbar(props) {
                 className={({ isActive }) =>
                   [
                     'block rounded-lg px-3 py-2 text-base font-medium transition-colors',
-                    isActive ? 'bg-red-900 text-white dark:bg-red-800 dark:text-white' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
+                    isActive ? 'nav-active' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
                   ].join(' ')
                 }
               >
@@ -184,7 +184,7 @@ export default function Navbar(props) {
                 className={({ isActive }) =>
                   [
                     'block rounded-lg px-3 py-2 text-base font-medium transition-colors',
-                    isActive ? 'bg-red-900 text-white dark:bg-red-800 dark:text-white' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
+                    isActive ? 'nav-active' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
                   ].join(' ')
                 }
               >
@@ -198,7 +198,7 @@ export default function Navbar(props) {
                 className={({ isActive }) =>
                   [
                     'block rounded-lg px-3 py-2 text-base font-medium transition-colors',
-                    isActive ? 'bg-red-900 text-white dark:bg-red-800 dark:text-white' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
+                    isActive ? 'nav-active' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
                   ].join(' ')
                 }
               >
@@ -212,7 +212,7 @@ export default function Navbar(props) {
                 className={({ isActive }) =>
                   [
                     'block rounded-lg px-3 py-2 text-base font-medium transition-colors',
-                    isActive ? 'bg-red-900 text-white dark:bg-red-800 dark:text-white' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
+                    isActive ? 'nav-active' : 'text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800',
                   ].join(' ')
                 }
               >
@@ -221,7 +221,7 @@ export default function Navbar(props) {
             </li>
             <li className="pt-2">
               <button
-                className="w-full rounded-lg bg-red-100 px-3 py-2 text-base font-semibold text-white hover:bg-red-500"
+                className="w-full rounded-lg bg-red-600 px-3 py-2 text-base font-semibold text-white hover:bg-red-500"
                 onClick={() => {
                   setIsMenuOpen(false);
                   navigate('/explore');

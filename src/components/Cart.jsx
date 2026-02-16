@@ -77,14 +77,14 @@ const ShoppingCart = () => {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity"
+          className="fixed inset-0  transition-opacity"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Slide-in Cart Panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-full sm:w-2/3 md:w-1/2 lg:w-2/5 xl:w-1/3 bg-slate-950 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-full sm:w-2/3 md:w-1/2 lg:w-2/5 xl:w-1/3 bg-yellow-800 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -94,7 +94,7 @@ const ShoppingCart = () => {
             <h2 className="text-2xl font-bold text-white">Shopping Cart</h2>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-yellow-400 hover:text-white text-3xl leading-none"
+              className="w-8 h-8 rounded-lg bg-yellow-800 text-white hover:bg-yellow-700 flex items-center justify-center font-bold text-1xl leading-none p-2"
             >
               ×
             </button>
@@ -124,16 +124,16 @@ const ShoppingCart = () => {
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => handleQuantityChange(item.id, -1)}
-                            className="w-7 h-7 rounded-lg bg-yellow-800 text-white hover:bg-yellow-700 flex items-center justify-center"
+                            className="w-8 h-8 rounded-lg bg-yellow-800 text-white hover:bg-yellow-700 flex items-center justify-center font-bold"
                           >
                             -
                           </button>
-                          <span className="text-white font-medium w-8 text-center">
+                          <span className="text-white font-medium w-10 text-center">
                             {item.quantity}
                           </span>
                           <button
                             onClick={() => handleQuantityChange(item.id, 1)}
-                            className="w-7 h-7 rounded-lg bg-yellow-800 text-white hover:bg-yellow-700 flex items-center justify-center"
+                            className="w-8 h-8 rounded-lg bg-yellow-800 text-white hover:bg-yellow-700 flex items-center justify-center font-bold"
                           >
                             +
                           </button>
@@ -145,7 +145,7 @@ const ShoppingCart = () => {
                           </span>
                           <button
                             onClick={() => handleRemove(item.id)}
-                            className="text-red-400 hover:text-red-300"
+                            className="w-8 h-8 rounded-lg bg-yellow-800 text-white hover:bg-yellow-700 flex items-center justify-center font-bold p-2"
                           >
                             🗑️
                           </button>

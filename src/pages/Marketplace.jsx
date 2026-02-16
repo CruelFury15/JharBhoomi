@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import image from '../image.jpg';
 import star from '../images/star.svg';
 import award from '../images/award.svg';
@@ -9,6 +10,7 @@ import Leftbar from '../components/Leftbar.jsx';
 import Cart from '../components/Cart.jsx';
 
 function Marketplace() {
+  const [showAll, setShowAll] = useState(false);
   return (
     <main className="mx-auto max-w-6xl space-y-12 px-4 py-10">
       {/* Breadcrumb */}
@@ -145,9 +147,21 @@ function Marketplace() {
           </div>
 
           <div className="flex justify-center pt-4">
-            <button className="rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-red-500">
-              Load More Products
-            </button>
+            {!showAll ? (
+              <button 
+                onClick={() => setShowAll(true)}
+                className="rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-red-500"
+              >
+                Load More Products
+              </button>
+            ) : (
+              <button 
+                onClick={() => setShowAll(false)}
+                className="rounded-xl border border-yellow-200 bg-white px-6 py-3 text-sm font-semibold text-yellow-900 shadow-sm hover:bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-900 dark:text-yellow-50 dark:hover:bg-yellow-800"
+              >
+                Show Less
+              </button>
+            )}
           </div>
         </div>
       </div>

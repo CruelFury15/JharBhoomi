@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import image from './image.jpg';
 import Navbar from './components/Navbar';
 import Button from './components/Button';
@@ -31,7 +31,7 @@ function HomePage() {
                 placeholder="What would you like to explore?"
                 aria-label="Search"
               />
-              <Button href="/" text="Explore" className="h-11 w-full sm:w-auto" />
+              <Button href="/explore" text="Explore" className="h-11 w-full sm:w-auto" />
             </form>
 
             <div className="mt-4 flex justify-center">
@@ -149,19 +149,19 @@ function App() {
               <div>
                 <h4 className="text-sm font-semibold text-yellow-900 dark:text-yellow-50">Quick Links</h4>
                 <ul className="mt-3 space-y-2 text-sm text-yellow-600 dark:text-yellow-300">
-                  <li><a className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer" href="/explore">Destinations</a></li>
-                  <li><a className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer" href="/ar-vr">AR/VR</a></li>
-                  <li><a className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer" href="/marketplace">Marketplace</a></li>
-                  <li><a className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer" href="/festivals">Festivals</a></li>
+                  <li><Link to="/explore" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Destinations</Link></li>
+                  <li><Link to="/ar-vr" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">AR/VR</Link></li>
+                  <li><Link to="/marketplace" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Marketplace</Link></li>
+                  <li><Link to="/festivals" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Festivals</Link></li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-sm font-semibold text-yellow-900 dark:text-yellow-50">Support</h4>
                 <ul className="mt-3 space-y-2 text-sm text-yellow-600 dark:text-yellow-300">
-                  <li><a className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer" href="/profile">Help Center</a></li>
-                  <li><a className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer" href="/profile">Contact Support</a></li>
-                  <li><a className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer" href="/profile">Privacy Policy</a></li>
+                  <li><Link to="/profile" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Help Center</Link></li>
+                  <li><Link to="/profile" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Contact Support</Link></li>
+                  <li><Link to="/profile" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Privacy Policy</Link></li>
                 </ul>
               </div>
             </div>

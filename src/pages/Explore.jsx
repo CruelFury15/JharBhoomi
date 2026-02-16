@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import image from '../image.jpg'; 
 import Section from '../components/Section.jsx';
 import Inbar from '../components/Inbar.jsx';
@@ -10,6 +11,7 @@ import heart from '../images/heart.svg';
 import more from '../images/more.svg';
 
 function Explore() {
+  const [showAll, setShowAll] = useState(false);
   return (
     <main className="mx-auto max-w-6xl space-y-12 px-4 py-10">
       {/* Breadcrumb */}
@@ -179,13 +181,21 @@ function Explore() {
           </div>
 
           <div className="flex gap-3 justify-center pt-4">
-            <button className="inline-flex items-center gap-2 rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-red-500">
-              <img src={more} alt="more" className="w-4 h-4" />
-              Load More Destinations
-            </button>
-            <button className="rounded-xl border border-yellow-200 bg-white px-6 py-3 text-sm font-semibold text-yellow-900 shadow-sm hover:bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-900 dark:text-yellow-50 dark:hover:bg-yellow-800">
-              Show Less
-            </button>
+            {!showAll ? (
+              <button 
+                onClick={() => setShowAll(true)}
+                className="inline-flex items-center gap-2 rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-red-500"
+              >
+                Load More Destinations
+              </button>
+            ) : (
+              <button 
+                onClick={() => setShowAll(false)}
+                className="rounded-xl border border-yellow-200 bg-white px-6 py-3 text-sm font-semibold text-yellow-900 shadow-sm hover:bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-900 dark:text-yellow-50 dark:hover:bg-yellow-800"
+              >
+                Show Less
+              </button>
+            )}
           </div>
         </div>
       </div>
