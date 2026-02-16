@@ -149,19 +149,19 @@ function App() {
               <div>
                 <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-50">Quick Links</h4>
                 <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                  <li><a className="hover:text-slate-900 dark:hover:text-white" href="/">Destinations</a></li>
-                  <li><a className="hover:text-slate-900 dark:hover:text-white" href="/">Experiences</a></li>
-                  <li><a className="hover:text-slate-900 dark:hover:text-white" href="/">Marketplace</a></li>
-                  <li><a className="hover:text-slate-900 dark:hover:text-white" href="/">Festivals</a></li>
+                  <li><a className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" href="/explore">Destinations</a></li>
+                  <li><a className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" href="/ar-vr">AR/VR</a></li>
+                  <li><a className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" href="/marketplace">Marketplace</a></li>
+                  <li><a className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" href="/festivals">Festivals</a></li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-50">Support</h4>
                 <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                  <li><a className="hover:text-slate-900 dark:hover:text-white" href="/">Help Center</a></li>
-                  <li><a className="hover:text-slate-900 dark:hover:text-white" href="/">Contact Support</a></li>
-                  <li><a className="hover:text-slate-900 dark:hover:text-white" href="/">Privacy Policy</a></li>
+                  <li><a className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" href="/profile">Help Center</a></li>
+                  <li><a className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" href="/profile">Contact Support</a></li>
+                  <li><a className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" href="/profile">Privacy Policy</a></li>
                 </ul>
               </div>
             </div>
