@@ -9,7 +9,7 @@ import month from '../images/month.svg';
 
 function Dcard(props) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+    <article className="overflow-hidden rounded-2xl border border-yellow-200 bg-white shadow-sm transition hover:shadow-md dark:border-yellow-800 dark:bg-yellow-900">
       <div className="relative">
         <img src={props.img} className="h-48 w-full object-cover" alt={props.alt} loading="lazy" />
 
@@ -41,11 +41,11 @@ function Dcard(props) {
 
       <div className="space-y-4 p-5">
         <div className="space-y-1">
-          <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">{props.cardtitle}</h3>
-          <p className="text-sm text-slate-600 dark:text-slate-300">{props.cardtext}</p>
+          <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-50">{props.cardtitle}</h3>
+          <p className="text-sm text-yellow-600 dark:text-yellow-300">{props.cardtext}</p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-700 dark:text-slate-200">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-yellow-700 dark:text-yellow-200">
           <span className="inline-flex items-center gap-2">
             <img src={duration} alt="duration" className="h-5 w-5" />
             <span className="font-medium">{props.duration}</span>
@@ -61,10 +61,10 @@ function Dcard(props) {
         </div>
 
         {(props.l1 || props.l2 || props.l3) && (
-          <ul className="grid grid-cols-1 gap-2 text-sm text-slate-700 dark:text-slate-200">
-            {props.l1 ? <li className="rounded-lg bg-slate-50 px-3 py-2 ring-1 ring-slate-200 dark:bg-slate-950 dark:ring-slate-800">{props.l1}</li> : null}
-            {props.l2 ? <li className="rounded-lg bg-slate-50 px-3 py-2 ring-1 ring-slate-200 dark:bg-slate-950 dark:ring-slate-800">{props.l2}</li> : null}
-            {props.l3 ? <li className="rounded-lg bg-slate-50 px-3 py-2 ring-1 ring-slate-200 dark:bg-slate-950 dark:ring-slate-800">{props.l3}</li> : null}
+          <ul className="grid grid-cols-1 gap-2 text-sm text-yellow-700 dark:text-yellow-200">
+            {props.l1 ? <li className="rounded-lg bg-yellow-50 px-3 py-2 ring-1 ring-yellow-200 dark:bg-yellow-950 dark:ring-yellow-800">{props.l1}</li> : null}
+            {props.l2 ? <li className="rounded-lg bg-yellow-50 px-3 py-2 ring-1 ring-yellow-200 dark:bg-yellow-950 dark:ring-yellow-800">{props.l2}</li> : null}
+            {props.l3 ? <li className="rounded-lg bg-yellow-50 px-3 py-2 ring-1 ring-yellow-200 dark:bg-yellow-950 dark:ring-yellow-800">{props.l3}</li> : null}
           </ul>
         )}
 
@@ -72,7 +72,7 @@ function Dcard(props) {
           <Button href={props.btnhref} text={props.btntxt} />
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-yellow-200 bg-white text-yellow-700 shadow-sm hover:bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 dark:hover:bg-yellow-800"
             aria-label="Share"
           >
             <img src={share} alt="share" className="h-5 w-5" />
@@ -80,9 +80,9 @@ function Dcard(props) {
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-3 border-t border-slate-200 px-5 py-4 text-sm dark:border-slate-800">
-        <span className="text-slate-600 dark:text-slate-300">Starting From</span>
-        <span className="text-base font-semibold text-slate-900 dark:text-slate-50">{props.price}</span>
+      <div className="flex items-center justify-between gap-3 border-t border-yellow-200 px-5 py-4 text-sm dark:border-yellow-800">
+        <span className="text-yellow-600 dark:text-yellow-300">Starting From</span>
+        <span className="text-base font-semibold text-yellow-900 dark:text-yellow-50">{props.price}</span>
       </div>
     </article>
   );

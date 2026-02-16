@@ -3,7 +3,7 @@ import Button from './Button';
 
 export default function Card(props) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+    <article className="overflow-hidden rounded-2xl border border-yellow-200 bg-white shadow-sm transition hover:shadow-md dark:border-yellow-800 dark:bg-yellow-900">
       <div className="relative">
         <img
           src={props.img}
@@ -20,15 +20,15 @@ export default function Card(props) {
 
       <div className="space-y-3 p-5">
         <div className="space-y-1">
-          <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">{props.cardtitle}</h3>
-          <p className="text-sm text-slate-600 dark:text-slate-300">{props.cardtext}</p>
+          <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-50">{props.cardtitle}</h3>
+          <p className="text-sm text-yellow-600 dark:text-yellow-300">{props.cardtext}</p>
         </div>
 
         {(props.l1 || props.l2 || props.l3) && (
-          <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            {props.l1 ? <li className="flex gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-indigo-500" />{props.l1}</li> : null}
-            {props.l2 ? <li className="flex gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-indigo-500" />{props.l2}</li> : null}
-            {props.l3 ? <li className="flex gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-indigo-500" />{props.l3}</li> : null}
+          <ul className="space-y-2 text-sm text-yellow-700 dark:text-yellow-200">
+            {props.l1 ? <li className="flex gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-red-500" />{props.l1}</li> : null}
+            {props.l2 ? <li className="flex gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-red-500" />{props.l2}</li> : null}
+            {props.l3 ? <li className="flex gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-red-500" />{props.l3}</li> : null}
           </ul>
         )}
 
