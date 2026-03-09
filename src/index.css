@@ -71,22 +71,22 @@ button{
 
 section.rounded-3xl.bg-white,
 .bg-white {
-  background: rgba(77, 77, 77, 0.415) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
 .dark section.rounded-3xl.bg-white,
 .dark .bg-white {
-  background: rgba(100, 73, 4, 0.697) !important;
+  background: rgba(100, 73, 4, 0.85) !important;
 }
 
 footer.bg-white {
-  background: rgba(77, 77, 77, 0.415) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
 .dark footer.bg-white {
-  background: rgba(100, 73, 4, 0.697) !important;
+  background: rgba(100, 73, 4, 0.85) !important;
 }
