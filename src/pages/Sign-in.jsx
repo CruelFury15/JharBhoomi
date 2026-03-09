@@ -173,7 +173,7 @@ const JharkhandSignIn = ({ onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-linear-to-br from-yellow-900 via-yellow-800 to-red-900 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen w-full bg-linear-to-br from-yellow-900 via-yellow-800 to-red-900 flex items-center justify-center p-2 sm:p-4 relative overflow-hidden">
       
       <div className="absolute inset-0">
         <div
@@ -207,7 +207,7 @@ const JharkhandSignIn = ({ onLogin }) => {
         }
       `}</style>
 
-      <div className="relative z-10 w-[95%] max-w-5xl h-[700px] sm:h-[600px] flex flex-col sm:flex-row rounded-4xl overflow-hidden backdrop-blur-md border border-white/10 shadow-2xl bg-black/10">
+      <div className="relative z-10 w-full max-w-5xl min-h-[500px] sm:h-[600px] md:h-[700px] flex flex-col sm:flex-row rounded-2xl sm:rounded-4xl overflow-hidden backdrop-blur-md border border-white/10 shadow-2xl bg-black/10">
         
         <div className="hidden sm:block w-1/2 relative overflow-hidden bg-linear-to-br from-yellow-500/20 via-green-500/20 to-red-500/20">
           <div className="absolute top-[-20%] left-[-20%] w-[80%] h-[80%] bg-orange-500/30 blur-[100px] rounded-full" />
@@ -244,13 +244,13 @@ const JharkhandSignIn = ({ onLogin }) => {
           </div>
         </div>
         
-        <div className="w-full sm:w-1/2 bg-black/10 backdrop-blur-md border-l border-white/10">
-          <div className="flex flex-col h-full p-8 sm:p-12 justify-center">
+        <div className="w-full sm:w-1/2 bg-black/10 backdrop-blur-md border-l-0 sm:border-l border-white/10">
+          <div className="flex flex-col h-full p-4 sm:p-8 md:p-12 justify-center">
             
-            <div className="flex gap-1 mb-8 bg-white/5 p-1 rounded-xl">
+            <div className="flex gap-1 mb-6 sm:mb-8 bg-white/5 p-1 rounded-xl">
               <button
                 onClick={() => setIsSignUp(false)}
-                className={`flex-1 py-3 px-6 rounded-lg font-semibold transition-all ${
+                className={`flex-1 py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-base font-semibold transition-all ${
                   !isSignUp
                     ? 'bg-yellow-600 text-white shadow-lg'
                     : 'text-white/60 hover:text-white/80'
@@ -260,7 +260,7 @@ const JharkhandSignIn = ({ onLogin }) => {
               </button>
               <button
                 onClick={() => setIsSignUp(true)}
-                className={`flex-1 py-3 px-6 rounded-lg font-semibold transition-all ${
+                className={`flex-1 py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-base font-semibold transition-all ${
                   isSignUp
                     ? 'bg-yellow-600 text-white shadow-lg'
                     : 'text-white/60 hover:text-white/80'
@@ -276,7 +276,7 @@ const JharkhandSignIn = ({ onLogin }) => {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               {isSignUp && (
                 <div>
                   <label className="block text-white/90 text-sm font-medium mb-2">
@@ -351,7 +351,7 @@ const JharkhandSignIn = ({ onLogin }) => {
 
               <button
                 type="submit"
-                className="w-full py-3 px-6 bg-yellow-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:bg-red-500 transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full py-2.5 sm:py-3 px-4 sm:px-6 bg-yellow-600 text-white text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:shadow-xl hover:bg-red-500 transition-all transform hover:scale-[1.02] active:scale-[0.98]"
               >
                 {isSignUp ? 'Create Account' : 'Login'}
               </button>
