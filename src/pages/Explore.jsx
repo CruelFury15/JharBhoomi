@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import image from '../image.jpg'; 
-import Section from '../components/Section.jsx';
 import Inbar from '../components/Inbar.jsx';
 import Dcard from '../components/Dcard.jsx';
 import star from '../images/star.svg';
@@ -8,13 +7,11 @@ import stars from '../images/stars.svg';
 import loved from '../images/loved.svg';
 import award from '../images/award.svg';
 import heart from '../images/heart.svg';
-import more from '../images/more.svg';
 
 function Explore() {
   const [showAll, setShowAll] = useState(false);
   return (
     <main className="mx-auto max-w-6xl space-y-12 px-4 py-10">
-      {/* Breadcrumb */}
       <nav className="flex" aria-label="breadcrumb">
         <ol className="inline-flex items-center space-x-1 md:space-x-3">
           <li className="inline-flex items-center">
@@ -33,7 +30,6 @@ function Explore() {
         </ol>
       </nav>
 
-      {/* Hero Section */}
       <section className="rounded-3xl border border-yellow-200 bg-white p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl dark:text-yellow-50">
@@ -44,24 +40,22 @@ function Explore() {
           </p>
         </div>
 
-        {/* Stats */}
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
-            <p className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">150+</p>
-            <p className="text-sm text-yellow-600 dark:text-yellow-300">Destinations</p>
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
+            <p className="text-2xl font-bold text-white">150+</p>
+            <p className="text-sm text-white">Destinations</p>
           </div>
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
-            <p className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">12</p>
-            <p className="text-sm text-yellow-600 dark:text-yellow-300">Categories</p>
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
+            <p className="text-2xl font-bold text-white">12</p>
+            <p className="text-sm text-white">Categories</p>
           </div>
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
-            <p className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">1M+</p>
-            <p className="text-sm text-yellow-600 dark:text-yellow-300">Annual Visitors</p>
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
+            <p className="text-2xl font-bold text-white">1M+</p>
+            <p className="text-sm text-white">Annual Visitors</p>
           </div>
         </div>
       </section>
 
-      {/* Search Form */}
       <section className="rounded-3xl border border-yellow-200 bg-white p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
         <h2 className="text-xl font-bold text-yellow-900 dark:text-yellow-50 mb-6">Plan Your Trip</h2>
         <form className="space-y-4">
@@ -95,7 +89,6 @@ function Explore() {
         </form>
       </section>
 
-      {/* Featured Highlights */}
       <section className="space-y-4">
         <div className="space-y-1">
           <h2 className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">Featured Highlights</h2>
@@ -153,16 +146,13 @@ function Explore() {
         </div>
       </section>
 
-      {/* Destinations Section with Sidebar Filter */}
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
-        {/* Sidebar Filter - 30% width */}
         <aside className="lg:col-span-3">
           <div className="sticky top-24">
             <Inbar />
           </div>
         </aside>
 
-        {/* Main Content - 70% width */}
         <div className="lg:col-span-7 space-y-6">
           <div className="space-y-1">
             <h2 className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">All Destinations</h2>

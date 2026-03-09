@@ -175,14 +175,14 @@ const JharkhandSignIn = ({ onLogin }) => {
   return (
     <div className="min-h-screen w-full bg-linear-to-br from-yellow-900 via-yellow-800 to-red-900 flex items-center justify-center p-2 sm:p-4 relative overflow-hidden">
       
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         <div
           className="absolute w-full h-full"
           style={{
             backgroundImage: `url(${MaoImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: 0.2
+            opacity: 0.5
           }}
         />
       </div>
@@ -207,18 +207,18 @@ const JharkhandSignIn = ({ onLogin }) => {
         }
       `}</style>
 
-      <div className="relative z-10 w-full max-w-5xl min-h-[500px] sm:h-[600px] md:h-[700px] flex flex-col sm:flex-row rounded-2xl sm:rounded-4xl overflow-hidden backdrop-blur-md border border-white/10 shadow-2xl bg-black/10">
+      <div className="relative z-10 w-full max-w-5xl min-h-[500px] sm:h-[600px] md:h-[700px] flex flex-col sm:flex-row rounded-2xl sm:rounded-4xl overflow-hidden backdrop-blur-sm border border-white/20 shadow-2xl bg-black/5">
         
-        <div className="hidden sm:block w-1/2 relative overflow-hidden bg-linear-to-br from-yellow-500/20 via-green-500/20 to-red-500/20">
+        <div className="w-full sm:w-1/2 relative overflow-hidden bg-linear-to-br from-yellow-500/20 via-green-500/20 to-red-500/20 min-h-[250px] sm:min-h-0">
           <div className="absolute top-[-20%] left-[-20%] w-[80%] h-[80%] bg-orange-500/30 blur-[100px] rounded-full" />
           <div className="absolute bottom-[-20%] right-[-20%] w-[80%] h-[80%] bg-green-500/30 blur-[100px] rounded-full" />
           <div className="absolute top-[30%] left-[30%] w-[40%] h-[40%] bg-yellow-400/20 blur-[80px] rounded-full" />
           
-          <DancerCouple delay={0} initialX="15%" initialY="20%" scale={1.2} index={0} />
-          <DancerCouple delay={2} initialX="65%" initialY="15%" scale={0.9} index={1} />
-          <DancerCouple delay={4} initialX="35%" initialY="45%" scale={1.1} index={2} />
-          <DancerCouple delay={1} initialX="60%" initialY="65%" scale={1} index={3} />
-          <DancerCouple delay={3} initialX="20%" initialY="70%" scale={0.85} index={4} />
+          <DancerCouple delay={0} initialX="15%" initialY="20%" scale={0.8} index={0} />
+          <DancerCouple delay={2} initialX="65%" initialY="15%" scale={0.7} index={1} />
+          <DancerCouple delay={4} initialX="35%" initialY="45%" scale={0.75} index={2} />
+          <DancerCouple delay={1} initialX="60%" initialY="65%" scale={0.7} index={3} />
+          <DancerCouple delay={3} initialX="20%" initialY="70%" scale={0.65} index={4} />
           
           <div className="absolute bottom-8 left-0 right-0 opacity-40">
             <svg width="100%" height="40">
@@ -233,19 +233,28 @@ const JharkhandSignIn = ({ onLogin }) => {
             </svg>
           </div>
           
-          <div className="absolute bottom-10 left-10 right-10 text-white z-20">
-            <div className="w-12 h-1 bg-yellow-400 mb-4 rounded-full" />
-            <h1 className="text-4xl font-bold mb-3 drop-shadow-lg tracking-tight">
+          <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 right-6 sm:right-10 text-white z-20">
+            <div className="w-12 h-1 bg-yellow-400 mb-3 sm:mb-4 rounded-full" />
+            <h1 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-3 drop-shadow-lg tracking-tight">
               JharBhoomi
             </h1>
-            <p className="text-white/90 text-sm font-medium drop-shadow-md leading-relaxed max-w-xs">
+            <p className="text-white/90 text-xs sm:text-sm font-medium drop-shadow-md leading-relaxed max-w-xs">
               Experience the rich culture and natural beauty of the region. Join us and be part of the tradition.
             </p>
           </div>
         </div>
         
-        <div className="w-full sm:w-1/2 bg-black/10 backdrop-blur-md border-l-0 sm:border-l border-white/10">
+        <div className="w-full sm:w-1/2 bg-black/5 backdrop-blur-sm border-l-0 sm:border-l border-white/10 border-t sm:border-t-0">
           <div className="flex flex-col h-full p-4 sm:p-8 md:p-12 justify-center">
+            
+            <div className="mb-6 sm:mb-8 text-center">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                Welcome to JharBhoomi
+              </h2>
+              <p className="text-white/70 text-sm">
+                Sign in to explore Jharkhand's treasures
+              </p>
+            </div>
             
             <div className="flex gap-1 mb-6 sm:mb-8 bg-white/5 p-1 rounded-xl">
               <button

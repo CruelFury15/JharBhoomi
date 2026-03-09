@@ -13,7 +13,6 @@ function Marketplace() {
   const [showAll, setShowAll] = useState(false);
   return (
     <main className="mx-auto max-w-6xl space-y-12 px-4 py-10">
-      {/* Breadcrumb */}
       <nav className="flex" aria-label="breadcrumb">
         <ol className="inline-flex items-center space-x-1 md:space-x-3">
           <li className="inline-flex items-center">
@@ -32,7 +31,6 @@ function Marketplace() {
         </ol>
       </nav>
 
-      {/* Hero Section */}
       <section className="rounded-3xl border border-yellow-200 bg-white p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl dark:text-yellow-50">
@@ -43,40 +41,38 @@ function Marketplace() {
           </p>
         </div>
 
-        {/* Stats */}
         <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
             <div className="flex justify-center mb-2">
               <img src={home} alt="Vendors" className="w-6 h-6" />
             </div>
-            <p className="text-xl font-bold text-yellow-900 dark:text-yellow-50">250+</p>
-            <p className="text-xs text-yellow-600 dark:text-yellow-300">Local Vendors</p>
+            <p className="text-xl font-bold text-white">250+</p>
+            <p className="text-xs text-white">Local Vendors</p>
           </div>
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
             <div className="flex justify-center mb-2">
               <img src={award} alt="Products" className="w-6 h-6" />
             </div>
-            <p className="text-xl font-bold text-yellow-900 dark:text-yellow-50">1000+</p>
-            <p className="text-xs text-yellow-600 dark:text-yellow-300">Certified Products</p>
+            <p className="text-xl font-bold text-white">1000+</p>
+            <p className="text-xs text-white">Certified Products</p>
           </div>
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
             <div className="flex justify-center mb-2">
               <img src={visitors} alt="Customers" className="w-6 h-6" />
             </div>
-            <p className="text-xl font-bold text-yellow-900 dark:text-yellow-50">15K+</p>
-            <p className="text-xs text-yellow-600 dark:text-yellow-300">Happy Customers</p>
+            <p className="text-xl font-bold text-white">15K+</p>
+            <p className="text-xs text-white">Happy Customers</p>
           </div>
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
             <div className="flex justify-center mb-2">
               <img src={star} alt="Rating" className="w-6 h-6" />
             </div>
-            <p className="text-xl font-bold text-yellow-900 dark:text-yellow-50">4.8</p>
-            <p className="text-xs text-yellow-600 dark:text-yellow-300">Avg Rating</p>
+            <p className="text-xl font-bold text-white">4.8</p>
+            <p className="text-xs text-white">Avg Rating</p>
           </div>
         </div>
       </section>
 
-      {/* Search & Filter */}
       <section className="rounded-3xl border border-yellow-200 bg-white p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
         <h2 className="text-xl font-bold text-yellow-900 dark:text-yellow-50 mb-6">Find Products</h2>
         <form className="space-y-4">
@@ -120,9 +116,7 @@ function Marketplace() {
         </form>
       </section>
 
-      {/* Products Section with Sidebar */}
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
-        {/* Sidebar - 30% width */}
         <aside className="lg:col-span-3">
           <div className="sticky top-24">
             <Leftbar />

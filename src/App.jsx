@@ -219,7 +219,8 @@ function App() {
           <Route path="*" element={<Navigate to={isAuthenticated ? "/" : "/sign-in"} replace />} />
         </Routes>
 
-        <footer className="border-t border-yellow-200 bg-white dark:border-yellow-800 dark:bg-yellow-950">
+        {isAuthenticated && (
+          <footer className="border-t border-yellow-200 bg-white dark:border-yellow-800 dark:bg-yellow-950">
           <div className="mx-auto max-w-6xl px-3 sm:px-4 py-8 sm:py-12">
             <div className="grid grid-cols-1 gap-6 sm:gap-8 md:gap-10 md:grid-cols-4">
               <div className="md:col-span-2">
@@ -263,6 +264,7 @@ function App() {
             </div>
           </div>
         </footer>
+        )}
       </div>
     </>
   );

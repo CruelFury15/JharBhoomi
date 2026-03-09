@@ -14,7 +14,6 @@ function Festivals() {
   const [showAll, setShowAll] = useState(false);
   return (
     <main className="mx-auto max-w-6xl space-y-12 px-4 py-10">
-      {/* Breadcrumb */}
       <nav className="flex" aria-label="breadcrumb">
         <ol className="inline-flex items-center space-x-1 md:space-x-3">
           <li className="inline-flex items-center">
@@ -33,7 +32,6 @@ function Festivals() {
         </ol>
       </nav>
 
-      {/* Hero Section */}
       <section className="rounded-3xl border border-yellow-200 bg-white p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl dark:text-yellow-50">
@@ -44,40 +42,38 @@ function Festivals() {
           </p>
         </div>
 
-        {/* Stats */}
         <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
             <div className="flex justify-center mb-2">
               <img src={home} alt="Events" className="w-6 h-6" />
             </div>
-            <p className="text-xl font-bold text-yellow-900 dark:text-yellow-50">50+</p>
-            <p className="text-xs text-yellow-600 dark:text-yellow-300">Annual Events</p>
+            <p className="text-xl font-bold text-white">50+</p>
+            <p className="text-xs text-white">Annual Events</p>
           </div>
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
             <div className="flex justify-center mb-2">
               <img src={award} alt="Programs" className="w-6 h-6" />
             </div>
-            <p className="text-xl font-bold text-yellow-900 dark:text-yellow-50">200+</p>
-            <p className="text-xs text-yellow-600 dark:text-yellow-300">Cultural Programs</p>
+            <p className="text-xl font-bold text-white">200+</p>
+            <p className="text-xs text-white">Cultural Programs</p>
           </div>
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
             <div className="flex justify-center mb-2">
               <img src={visitors} alt="Visitors" className="w-6 h-6" />
             </div>
-            <p className="text-xl font-bold text-yellow-900 dark:text-yellow-50">500K+</p>
-            <p className="text-xs text-yellow-600 dark:text-yellow-300">Total Visitors</p>
+            <p className="text-xl font-bold text-white">500K+</p>
+            <p className="text-xs text-white">Total Visitors</p>
           </div>
-          <div className="rounded-xl bg-yellow-50 p-4 text-center dark:bg-yellow-800">
+          <div className="rounded-xl bg-yellow-600 p-4 text-center">
             <div className="flex justify-center mb-2">
               <img src={star} alt="Heritage" className="w-6 h-6" />
             </div>
-            <p className="text-xl font-bold text-yellow-900 dark:text-yellow-50">3</p>
-            <p className="text-xs text-yellow-600 dark:text-yellow-300">UNESCO Heritage</p>
+            <p className="text-xl font-bold text-white">3</p>
+            <p className="text-xs text-white">UNESCO Heritage</p>
           </div>
         </div>
       </section>
 
-      {/* Filter Section */}
       <section className="rounded-3xl border border-yellow-200 bg-white p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
         <h2 className="text-xl font-bold text-yellow-900 dark:text-yellow-50 mb-6">Find Events</h2>
         <form className="space-y-4">
