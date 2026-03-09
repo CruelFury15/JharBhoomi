@@ -18,13 +18,13 @@
   }
 }
 .navbar{
-  background: linear-gradient(90deg, rgb(227, 200, 131), rgb(239, 159, 139));
+  background: linear-gradient(90deg, rgb(255, 183, 0), rgb(255, 67, 20));
 }
 .dark .navbar{
     background: linear-gradient(90deg, rgb(51, 37, 1), rgb(59, 13, 2),rgb(59, 2, 2));
 }
 button{
-  background: linear-gradient(90deg, rgb(227, 200, 131), rgb(239, 159, 139));
+  background: linear-gradient(90deg, rgb(145, 109, 17), rgb(238, 105, 72));
 }
 
 .nav-active {
