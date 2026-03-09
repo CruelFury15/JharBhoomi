@@ -16,16 +16,16 @@ function Marketplace() {
       <nav className="flex" aria-label="breadcrumb">
         <ol className="inline-flex items-center space-x-1 md:space-x-3">
           <li className="inline-flex items-center">
-            <a href="/" className="inline-flex items-center text-sm font-medium text-yellow-700 hover:text-red-600 dark:text-yellow-400 dark:hover:text-white">
+            <a href="/" className="inline-flex items-center text-sm font-medium text-slate-700 hover:text-red-600 dark:text-yellow-400 dark:hover:text-white">
               Home
             </a>
           </li>
           <li>
             <div className="flex items-center">
-              <svg className="w-3 h-3 text-yellow-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <svg className="w-3 h-3 text-slate-400 dark:text-yellow-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
               </svg>
-              <span className="ml-1 text-sm font-medium text-yellow-500 md:ml-2 dark:text-yellow-400">Marketplace</span>
+              <span className="ml-1 text-sm font-medium text-slate-600 md:ml-2 dark:text-yellow-400">Marketplace</span>
             </div>
           </li>
         </ol>
@@ -33,10 +33,10 @@ function Marketplace() {
 
       <section className="rounded-3xl border border-yellow-200 bg-white p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl dark:text-yellow-50">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-yellow-50">
             Cultural Marketplace
           </h1>
-          <p className="mt-3 text-base text-yellow-600 dark:text-yellow-300">
+          <p className="mt-3 text-base text-slate-700 dark:text-yellow-300">
             Support local artisans, experience authentic Jharkhand culture, and bring home a piece of heritage
           </p>
         </div>
@@ -74,16 +74,16 @@ function Marketplace() {
       </section>
 
       <section className="rounded-3xl border border-yellow-200 bg-white p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
-        <h2 className="text-xl font-bold text-yellow-900 dark:text-yellow-50 mb-6">Find Products</h2>
+        <h2 className="text-xl font-bold text-slate-900 dark:text-yellow-50 mb-6">Find Products</h2>
         <form className="space-y-4">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <label htmlFor="category" className="block text-sm font-medium text-yellow-700 dark:text-yellow-300 mb-2">
+              <label htmlFor="category" className="block text-sm font-medium text-slate-700 dark:text-yellow-300 mb-2">
                 Category
               </label>
               <select
                 id="category"
-                className="w-full rounded-xl border border-yellow-200 bg-white px-4 py-3 text-sm text-yellow-900 shadow-sm outline-none focus:ring-2 focus:ring-red-500 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-50"
+                className="w-full rounded-xl border border-yellow-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none focus:ring-2 focus:ring-red-500 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-50"
               >
                 <option>All Categories</option>
                 <option>Handicrafts</option>
@@ -93,12 +93,12 @@ function Marketplace() {
               </select>
             </div>
             <div>
-              <label htmlFor="price" className="block text-sm font-medium text-yellow-700 dark:text-yellow-300 mb-2">
+              <label htmlFor="price" className="block text-sm font-medium text-slate-700 dark:text-yellow-300 mb-2">
                 Price Range
               </label>
               <select
                 id="price"
-                className="w-full rounded-xl border border-yellow-200 bg-white px-4 py-3 text-sm text-yellow-900 shadow-sm outline-none focus:ring-2 focus:ring-red-500 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-50"
+                className="w-full rounded-xl border border-yellow-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none focus:ring-2 focus:ring-red-500 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-50"
               >
                 <option>All Prices</option>
                 <option>Under ₹2,000</option>
@@ -126,7 +126,7 @@ function Marketplace() {
     
         <div className="lg:col-span-7 space-y-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">Featured Products</h2>
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-yellow-50">Featured Products</h2>
             <Dropdown />
           </div>
 
@@ -151,7 +151,7 @@ function Marketplace() {
             ) : (
               <button 
                 onClick={() => setShowAll(false)}
-                className="rounded-xl border border-yellow-200 bg-white px-6 py-3 text-sm font-semibold text-yellow-900 shadow-sm hover:bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-900 dark:text-yellow-50 dark:hover:bg-yellow-800"
+                className="rounded-xl border border-yellow-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm hover:bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-900 dark:text-yellow-50 dark:hover:bg-yellow-800"
               >
                 Show Less
               </button>

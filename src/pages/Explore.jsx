@@ -15,16 +15,16 @@ function Explore() {
       <nav className="flex" aria-label="breadcrumb">
         <ol className="inline-flex items-center space-x-1 md:space-x-3">
           <li className="inline-flex items-center">
-            <a href="/" className="inline-flex items-center text-sm font-medium text-yellow-700 hover:text-red-900 dark:text-yellow-800 dark:hover:text-white">
+            <a href="/" className="inline-flex items-center text-sm font-medium text-slate-700 hover:text-red-900 dark:text-yellow-400 dark:hover:text-white">
               Home
             </a>
           </li>
           <li>
             <div className="flex items-center">
-              <svg className="w-3 h-3 text-yellow-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <svg className="w-3 h-3 text-slate-400 dark:text-yellow-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
               </svg>
-              <span className="ml-1 text-sm font-medium text-yellow-500 md:ml-2 dark:text-yellow-800">Explore</span>
+              <span className="ml-1 text-sm font-medium text-slate-600 md:ml-2 dark:text-yellow-400">Explore</span>
             </div>
           </li>
         </ol>
@@ -32,10 +32,10 @@ function Explore() {
 
       <section className="rounded-3xl border border-yellow-200 bg-white p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl dark:text-yellow-50">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-yellow-50">
             Explore Jharkhand
           </h1>
-          <p className="mt-3 text-base text-yellow-600 dark:text-yellow-300">
+          <p className="mt-3 text-base text-slate-700 dark:text-yellow-300">
             Discover the hidden gems of Jharkhand - from majestic waterfalls to ancient temples, wildlife sanctuaries to tribal villages
           </p>
         </div>
@@ -57,27 +57,27 @@ function Explore() {
       </section>
 
       <section className="rounded-3xl border border-yellow-200 bg-white p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
-        <h2 className="text-xl font-bold text-yellow-900 dark:text-yellow-50 mb-6">Plan Your Trip</h2>
+        <h2 className="text-xl font-bold text-slate-900 dark:text-yellow-50 mb-6">Plan Your Trip</h2>
         <form className="space-y-4">
           <div>
-            <label htmlFor="location" className="block text-sm font-medium text-yellow-700 dark:text-yellow-300 mb-2">
+            <label htmlFor="location" className="block text-sm font-medium text-slate-700 dark:text-yellow-300 mb-2">
               Location
             </label>
             <input
               type="text"
               id="location"
-              className="w-full rounded-xl border border-yellow-200 bg-white px-4 py-3 text-sm text-yellow-900 shadow-sm outline-none placeholder:text-yellow-400 focus:ring-2 focus:ring-red-500 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-50"
+              className="w-full rounded-xl border border-yellow-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-red-500 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-50 dark:placeholder:text-yellow-400"
               placeholder="Where do you want to go?"
             />
           </div>
           <div>
-            <label htmlFor="date" className="block text-sm font-medium text-yellow-700 dark:text-yellow-300 mb-2">
+            <label htmlFor="date" className="block text-sm font-medium text-slate-700 dark:text-yellow-300 mb-2">
               Travel Date
             </label>
             <input
               type="date"
               id="date"
-              className="w-full rounded-xl border border-yellow-200 bg-white px-4 py-3 text-sm text-yellow-900 shadow-sm outline-none focus:ring-2 focus:ring-red-500 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-50"
+              className="w-full rounded-xl border border-yellow-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none focus:ring-2 focus:ring-red-500 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-50"
             />
           </div>
           <button
@@ -91,8 +91,8 @@ function Explore() {
 
       <section className="space-y-4">
         <div className="space-y-1">
-          <h2 className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">Featured Highlights</h2>
-          <p className="text-sm text-yellow-600 dark:text-yellow-300">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-yellow-50">Featured Highlights</h2>
+          <p className="text-sm text-slate-700 dark:text-yellow-300">
             Experience the very best of Jharkhand's natural and cultural wonders
           </p>
         </div>
@@ -101,39 +101,39 @@ function Explore() {
           <div className="rounded-2xl border border-yellow-200 bg-white p-6 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
             <div className="flex items-center gap-2 mb-3">
               <img src={loved} alt="Most Popular" className="w-5 h-5" />
-              <span className="text-xs font-medium text-yellow-600 dark:text-yellow-300">Most Popular</span>
+              <span className="text-xs font-medium text-slate-600 dark:text-yellow-300">Most Popular</span>
             </div>
-            <h3 className="text-lg font-bold text-yellow-900 dark:text-yellow-50">Hundru Falls</h3>
-            <p className="text-sm text-yellow-600 dark:text-yellow-300 mt-1">Majestic 98m waterfall</p>
+            <h3 className="text-lg font-bold text-slate-900 dark:text-yellow-50">Hundru Falls</h3>
+            <p className="text-sm text-slate-700 dark:text-yellow-300 mt-1">Majestic 98m waterfall</p>
             <div className="flex items-center gap-1 mt-3">
               <img src={star} alt="Rating" className="w-4 h-4" />
-              <span className="text-sm font-semibold text-yellow-900 dark:text-yellow-50">4.5</span>
+              <span className="text-sm font-semibold text-slate-900 dark:text-yellow-50">4.5</span>
             </div>
           </div>
 
           <div className="rounded-2xl border border-yellow-200 bg-white p-6 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
             <div className="flex items-center gap-2 mb-3">
               <img src={award} alt="Top Rated" className="w-5 h-5" />
-              <span className="text-xs font-medium text-yellow-600 dark:text-yellow-300">Top Rated</span>
+              <span className="text-xs font-medium text-slate-600 dark:text-yellow-300">Top Rated</span>
             </div>
-            <h3 className="text-lg font-bold text-yellow-900 dark:text-yellow-50">Baidyanath Temple</h3>
-            <p className="text-sm text-yellow-600 dark:text-yellow-300 mt-1">Sacred Jyotirlinga shrine</p>
+            <h3 className="text-lg font-bold text-slate-900 dark:text-yellow-50">Baidyanath Temple</h3>
+            <p className="text-sm text-slate-700 dark:text-yellow-300 mt-1">Sacred Jyotirlinga shrine</p>
             <div className="flex items-center gap-1 mt-3">
               <img src={star} alt="Rating" className="w-4 h-4" />
-              <span className="text-sm font-semibold text-yellow-900 dark:text-yellow-50">4.9</span>
+              <span className="text-sm font-semibold text-slate-900 dark:text-yellow-50">4.9</span>
             </div>
           </div>
 
           <div className="rounded-2xl border border-yellow-200 bg-white p-6 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
             <div className="flex items-center gap-2 mb-3">
               <img src={heart} alt="Guest Favorite" className="w-5 h-5" />
-              <span className="text-xs font-medium text-yellow-600 dark:text-yellow-300">Guest Favorite</span>
+              <span className="text-xs font-medium text-slate-600 dark:text-yellow-300">Guest Favorite</span>
             </div>
-            <h3 className="text-lg font-bold text-yellow-900 dark:text-yellow-50">Netarhat Hills</h3>
-            <p className="text-sm text-yellow-600 dark:text-yellow-300 mt-1">Queen of Chotanagpur</p>
+            <h3 className="text-lg font-bold text-slate-900 dark:text-yellow-50">Netarhat Hills</h3>
+            <p className="text-sm text-slate-700 dark:text-yellow-300 mt-1">Queen of Chotanagpur</p>
             <div className="flex items-center gap-1 mt-3">
               <img src={star} alt="Rating" className="w-4 h-4" />
-              <span className="text-sm font-semibold text-yellow-900 dark:text-yellow-50">4.7</span>
+              <span className="text-sm font-semibold text-slate-900 dark:text-yellow-50">4.7</span>
             </div>
           </div>
         </div>
@@ -155,8 +155,8 @@ function Explore() {
 
         <div className="lg:col-span-7 space-y-6">
           <div className="space-y-1">
-            <h2 className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">All Destinations</h2>
-            <p className="text-sm text-yellow-600 dark:text-yellow-300">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-yellow-50">All Destinations</h2>
+            <p className="text-sm text-slate-700 dark:text-yellow-300">
               Browse through our complete collection of destinations
             </p>
           </div>
@@ -181,7 +181,7 @@ function Explore() {
             ) : (
               <button 
                 onClick={() => setShowAll(false)}
-                className="rounded-xl border border-yellow-200 bg-white px-6 py-3 text-sm font-semibold text-yellow-900 shadow-sm hover:bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-900 dark:text-yellow-50 dark:hover:bg-yellow-800"
+                className="rounded-xl border border-yellow-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm hover:bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-900 dark:text-yellow-50 dark:hover:bg-yellow-800"
               >
                 Show Less
               </button>

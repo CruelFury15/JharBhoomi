@@ -23,16 +23,16 @@ function HomePage() {
       <main className="mx-auto max-w-6xl space-y-8 sm:space-y-12 px-3 sm:px-4 py-6 sm:py-10">
         <section className="rounded-2xl sm:rounded-3xl border border-yellow-200 bg-white p-4 sm:p-6 md:p-8 shadow-sm dark:border-yellow-800 dark:bg-yellow-900">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-yellow-900 dark:text-yellow-50">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-yellow-50">
               Experience the Magic of Jharkhand
             </h1>
-            <p className="mt-2 sm:mt-3 text-sm sm:text-base text-yellow-600 dark:text-yellow-300">
+            <p className="mt-2 sm:mt-3 text-sm sm:text-base text-slate-700 dark:text-yellow-300">
               Where culture meets nature — discover eco-trails, cultural treasures, and authentic local life in the heart of India.
             </p>
 
             <form className="mx-auto mt-4 sm:mt-6 flex max-w-xl flex-col gap-3 sm:flex-row" role="search">
               <input
-                className="h-10 sm:h-11 w-full rounded-xl border border-yellow-200 bg-white px-3 sm:px-4 text-sm text-yellow-900 shadow-sm outline-none placeholder:text-yellow-400 focus:ring-2 focus:ring-red-500 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-50"
+                className="h-10 sm:h-11 w-full rounded-xl border border-yellow-200 bg-white px-3 sm:px-4 text-sm text-slate-900 shadow-sm outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-red-500 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-50 dark:placeholder:text-yellow-400"
                 type="search"
                 placeholder="What would you like to explore?"
                 aria-label="Search"
@@ -48,8 +48,8 @@ function HomePage() {
 
         <section className="space-y-3 sm:space-y-4">
           <div className="space-y-1">
-            <h2 className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">Discover Destinations</h2>
-            <p className="text-sm text-yellow-600 dark:text-yellow-300">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-yellow-50">Discover Destinations</h2>
+            <p className="text-sm text-slate-700 dark:text-yellow-300">
               Immerse yourself in Jharkhand's natural wonders and cultural treasures through our interactive showcase.
             </p>
           </div>
@@ -67,8 +67,8 @@ function HomePage() {
 
         <section className="space-y-4">
           <div className="space-y-1">
-            <h2 className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">Cultural Marketplace</h2>
-            <p className="text-sm text-yellow-600 dark:text-yellow-300">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-yellow-50">Cultural Marketplace</h2>
+            <p className="text-sm text-slate-700 dark:text-yellow-300">
               Support local artisans and immerse yourself in authentic Jharkhand culture.
             </p>
           </div>
@@ -86,8 +86,8 @@ function HomePage() {
 
         <section className="space-y-4">
           <div className="space-y-1">
-            <h2 className="text-2xl font-bold text-yellow-900 dark:text-yellow-50">🎉 Upcoming Festivals & Events</h2>
-            <p className="text-sm text-yellow-600 dark:text-yellow-300">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-yellow-50">🎉 Upcoming Festivals & Events</h2>
+            <p className="text-sm text-slate-700 dark:text-yellow-300">
               Immerse yourself in the vibrant cultural celebrations of Jharkhand.
             </p>
           </div>
@@ -229,38 +229,38 @@ function App() {
                     JH
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-yellow-900 dark:text-yellow-50">JharBhoomi</h3>
-                    <p className="text-sm text-yellow-600 dark:text-yellow-300">Jharkhand Tourism Portal</p>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-yellow-50">JharBhoomi</h3>
+                    <p className="text-sm text-slate-700 dark:text-yellow-300">Jharkhand Tourism Portal</p>
                   </div>
                 </div>
-                <p className="mt-4 text-sm text-yellow-600 dark:text-yellow-300">
+                <p className="mt-4 text-sm text-slate-700 dark:text-yellow-300">
                   Discover the rich cultural heritage and natural beauty of Jharkhand. Experience authentic tribal traditions, pristine waterfalls, and vibrant festivals that celebrate the spirit of this beautiful state.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-sm font-semibold text-yellow-900 dark:text-yellow-50">Quick Links</h4>
-                <ul className="mt-3 space-y-2 text-sm text-yellow-600 dark:text-yellow-300">
-                  <li><Link to="/explore" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Destinations</Link></li>
-                  <li><Link to="/ar-vr" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">AR/VR</Link></li>
-                  <li><Link to="/marketplace" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Marketplace</Link></li>
-                  <li><Link to="/festivals" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Festivals</Link></li>
+                <h4 className="text-sm font-semibold text-slate-900 dark:text-yellow-50">Quick Links</h4>
+                <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-yellow-300">
+                  <li><Link to="/explore" className="hover:text-slate-900 hover:font-semibold dark:hover:text-white transition-colors cursor-pointer">Destinations</Link></li>
+                  <li><Link to="/ar-vr" className="hover:text-slate-900 hover:font-semibold dark:hover:text-white transition-colors cursor-pointer">AR/VR</Link></li>
+                  <li><Link to="/marketplace" className="hover:text-slate-900 hover:font-semibold dark:hover:text-white transition-colors cursor-pointer">Marketplace</Link></li>
+                  <li><Link to="/festivals" className="hover:text-slate-900 hover:font-semibold dark:hover:text-white transition-colors cursor-pointer">Festivals</Link></li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-sm font-semibold text-yellow-900 dark:text-yellow-50">Support</h4>
-                <ul className="mt-3 space-y-2 text-sm text-yellow-600 dark:text-yellow-300">
-                  <li><Link to="/profile" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Help Center</Link></li>
-                  <li><Link to="/profile" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Contact Support</Link></li>
-                  <li><Link to="/profile" className="hover:text-yellow-900 dark:hover:text-white transition-colors cursor-pointer">Privacy Policy</Link></li>
+                <h4 className="text-sm font-semibold text-slate-900 dark:text-yellow-50">Support</h4>
+                <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-yellow-300">
+                  <li><Link to="/profile" className="hover:text-slate-900 hover:font-semibold dark:hover:text-white transition-colors cursor-pointer">Help Center</Link></li>
+                  <li><Link to="/profile" className="hover:text-slate-900 hover:font-semibold dark:hover:text-white transition-colors cursor-pointer">Contact Support</Link></li>
+                  <li><Link to="/profile" className="hover:text-slate-900 hover:font-semibold dark:hover:text-white transition-colors cursor-pointer">Privacy Policy</Link></li>
                 </ul>
               </div>
             </div>
 
-            <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col gap-3 border-t border-yellow-200 pt-4 sm:pt-6 text-xs sm:text-sm text-yellow-600 dark:border-yellow-800 dark:text-yellow-300 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col gap-3 border-t border-yellow-200 pt-4 sm:pt-6 text-xs sm:text-sm text-slate-700 dark:border-yellow-800 dark:text-yellow-300 sm:flex-row sm:items-center sm:justify-between">
               <p>© 2027 Government of Jharkhand. All rights reserved.</p>
-              <p className="text-yellow-500 dark:text-yellow-400">Made for Jharkhand</p>
+              <p className="text-slate-800 dark:text-yellow-400">Made for Jharkhand</p>
             </div>
           </div>
         </footer>
