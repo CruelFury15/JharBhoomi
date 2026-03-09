@@ -182,8 +182,10 @@ const JharkhandSignIn = ({ onLogin }) => {
             backgroundImage: `url(${MaoImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: 0.5
+            opacity: 0.5,
+            willChange: 'opacity'
           }}
+          loading="eager"
         />
       </div>
 
@@ -204,6 +206,18 @@ const JharkhandSignIn = ({ onLogin }) => {
         @keyframes drumBeat {
           0%, 100% { transform: rotate(0deg); }
           50% { transform: rotate(-5deg); }
+        }
+        
+        /* Preload background image */
+        @supports (content: url(${MaoImage})) {
+          body::after {
+            content: url(${MaoImage});
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            z-index: -1;
+          }
         }
       `}</style>
 

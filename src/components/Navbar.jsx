@@ -15,23 +15,23 @@ export default function Navbar(props) {
 
   return (
     <header className="navbar sticky top-0 z-50 border-b border-yellow-200 bg-white/80 backdrop-blur dark:border-yellow-800 dark:bg-yellow-950/70">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <div className="flex items-center gap-3">
-          <NavLink to="/" className="flex items-center gap-3">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-2 sm:gap-4 px-3 sm:px-4 py-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <NavLink to="/" className="flex items-center gap-2 sm:gap-3">
             <img
               src={props.img}
               alt="Brand logo"
               width="48"
               height="48"
-              className="h-12 w-12 rounded-xl object-cover ring-1 ring-yellow-200 dark:ring-yellow-800"
+              className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl object-cover ring-1 ring-yellow-200 dark:ring-yellow-800"
             />
-            <span className="text-lg font-bold tracking-tight text-yellow-900 dark:text-yellow-50">
+            <span className="text-base sm:text-lg font-bold tracking-tight text-yellow-900 dark:text-yellow-50">
               {props.title}
             </span>
           </NavLink>
         </div>
 
-        <ul className="hidden items-center gap-5 text-sm font-medium text-yellow-700 md:flex dark:text-yellow-200">
+        <ul className="hidden items-center gap-3 lg:gap-5 text-sm font-medium text-yellow-700 md:flex dark:text-yellow-200">
           <li>
             <NavLink
               to="/"
