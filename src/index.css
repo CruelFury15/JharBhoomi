@@ -56,7 +56,48 @@
     background: linear-gradient(90deg, rgb(51, 37, 1), rgb(59, 13, 2),rgb(59, 2, 2));
 }
 button{
-  background: linear-gradient(90deg, rgb(145, 109, 17), rgb(238, 105, 72));
+  background: linear-gradient(90deg, rgb(145, 109, 17), rgb(238, 105, 72)) !important;
+  color: antiquewhite !important;
+  border: none;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Ensure button text color applies to all button content */
+button * {
+  color: antiquewhite !important;
+}
+
+/* Dark mode button styles */
+.dark button {
+  background: linear-gradient(90deg, rgb(145, 109, 17), rgb(238, 105, 72)) !important;
+  color: antiquewhite !important;
+}
+
+.dark button:hover {
+  opacity: 0.9;
+}
+
+/* Exception for icon-only buttons or special buttons that need different styling */
+button[aria-label="Like"],
+button[aria-label="Share"],
+button[aria-label="Toggle menu"] {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: rgb(51, 37, 1) !important;
+}
+
+.dark button[aria-label="Like"],
+.dark button[aria-label="Share"],
+.dark button[aria-label="Toggle menu"] {
+  background: rgba(100, 73, 4, 0.9) !important;
+  color: rgb(254, 243, 199) !important;
 }
 
 .nav-active {
