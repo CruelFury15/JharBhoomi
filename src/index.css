@@ -18,7 +18,7 @@
   }
 }
 
-/* Ensure dark theme backgrounds are applied properly */
+
 .dark .bg-white {
   background-color: rgb(113, 63, 18) !important;
 }
