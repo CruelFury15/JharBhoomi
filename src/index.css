@@ -20,24 +20,30 @@
 
 
 .dark .bg-white {
-  background-color: rgb(113, 63, 18) !important;
+  background-color: transparent !important;
+}
+
+/* Exception: Keep toggle button circle white in dark mode */
+.dark button span span.bg-white {
+  background-color: white !important;
 }
 
 .dark .bg-yellow-900 {
-  background-color: rgb(113, 63, 18) !important;
+  background-color: transparent !important;
 }
 
 .dark .bg-yellow-950 {
   background-color: rgb(64, 46, 2) !important;
 }
 
-/* Dark theme for cards and sections */
-.dark section {
+/* Dark theme for cards - keep them visible with their own background */
+.dark article {
   background-color: rgb(113, 63, 18) !important;
 }
 
-.dark article {
-  background-color: rgb(113, 63, 18) !important;
+/* Dark theme for sections - make them transparent to match body */
+.dark section {
+  background-color: transparent !important;
 }
 
 /* Dark theme for form elements */
@@ -48,6 +54,27 @@
 
 .dark input::placeholder, .dark select::placeholder, .dark textarea::placeholder {
   color: rgb(254, 243, 199, 0.6) !important;
+}
+
+/* Light mode form elements - ensure proper contrast */
+input, select, textarea {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: rgb(51, 37, 1) !important;
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+  color: rgba(51, 37, 1, 0.6) !important;
+}
+
+/* Select dropdown options styling */
+select option {
+  background-color: white;
+  color: rgb(51, 37, 1);
+}
+
+.dark select option {
+  background-color: rgb(64, 46, 2);
+  color: rgb(254, 243, 199);
 }
 .navbar{
   background: linear-gradient(90deg, rgb(255, 183, 0), rgb(255, 67, 20));
