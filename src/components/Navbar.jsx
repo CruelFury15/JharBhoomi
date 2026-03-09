@@ -272,7 +272,7 @@ export default function Navbar(props) {
                     setIsMenuOpen(false);
                     handleLogout();
                   }}
-                  className="w-full rounded-lg bg-yellow-100 px-3 py-2 text-base font-medium text-yellow-100 hover:bg-yellow-200 dark:bg-yellow-800 dark:text-yellow-50 dark:hover:bg-yellow-700"
+                  className="w-full rounded-lg bg-yellow-100 px-3 py-2 text-base font-medium text-yellow-900 hover:bg-yellow-200 dark:bg-yellow-800 dark:text-yellow-50 dark:hover:bg-yellow-700"
                 >
                   Logout
                 </button>
