@@ -1,4 +1,5 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import image from './image.jpg';
 import Navbar from './components/Navbar';
 import Button from './components/Button';
@@ -10,6 +11,11 @@ import ArVr from './pages/ArVr';
 import Marketplace from './pages/Marketplace';
 import Festivals from './pages/Festivals';
 import Profile from './pages/Profile';
+import SignIn from './pages/Sign-in';
+
+function ProtectedRoute({ children, isAuthenticated }) {
+  return isAuthenticated ? children : <Navigate to="/sign-in" replace />;
+}
 
 function HomePage() {
   return (
@@ -105,27 +111,112 @@ function HomePage() {
 }
 
 function App() {
+  const [user, setUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('jharbhoomi_user');
+    if (storedUser) {
+      const userData = JSON.parse(storedUser);
+      setTimeout(() => {
+        setUser(userData);
+        setIsAuthenticated(true);
+      }, 0);
+    }
+  }, []);
+
+  const handleLogin = (userData) => {
+    setUser(userData);
+    setIsAuthenticated(true);
+    localStorage.setItem('jharbhoomi_user', JSON.stringify(userData));
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    setIsAuthenticated(false);
+    localStorage.removeItem('jharbhoomi_user');
+  };
+
   return (
     <>
       <div className="min-h-screen">
-        <Navbar
-          img={image}
-          title="JharBhoomi"
-          head1="Explore"
-          head2="AR/VR"
-          head3="Marketplace"
-          head4="Festivals"
-          head5="Profile"
-        />
-        <Darkmode />
+        {isAuthenticated && (
+          <>
+            <Navbar
+              img={image}
+              title="JharBhoomi"
+              head1="Explore"
+              head2="AR/VR"
+              head3="Marketplace"
+              head4="Festivals"
+              head5="Profile"
+              userName={user?.name}
+              onLogout={handleLogout}
+            />
+            <Darkmode />
+          </>
+        )}
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/explore" element={<Explore />} />
-          <Route path="/ar-vr" element={<ArVr />} />
-          <Route path="/marketplace" element={<Marketplace />} />
-          <Route path="/festivals" element={<Festivals />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route 
+            path="/sign-in" 
+            element={
+              isAuthenticated ? (
+                <Navigate to="/" replace />
+              ) : (
+                <SignIn onLogin={handleLogin} />
+              )
+            } 
+          />
+          <Route 
+            path="/" 
+            element={
+              <ProtectedRoute isAuthenticated={isAuthenticated}>
+                <HomePage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/explore" 
+            element={
+              <ProtectedRoute isAuthenticated={isAuthenticated}>
+                <Explore />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/ar-vr" 
+            element={
+              <ProtectedRoute isAuthenticated={isAuthenticated}>
+                <ArVr />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/marketplace" 
+            element={
+              <ProtectedRoute isAuthenticated={isAuthenticated}>
+                <Marketplace />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/festivals" 
+            element={
+              <ProtectedRoute isAuthenticated={isAuthenticated}>
+                <Festivals />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/profile" 
+            element={
+              <ProtectedRoute isAuthenticated={isAuthenticated}>
+                <Profile />
+              </ProtectedRoute>
+            } 
+          />
+          <Route path="*" element={<Navigate to={isAuthenticated ? "/" : "/sign-in"} replace />} />
         </Routes>
 
         <footer className="border-t border-yellow-200 bg-white dark:border-yellow-800 dark:bg-yellow-950">

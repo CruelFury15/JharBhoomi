@@ -1,9 +1,7 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 export default function Button(props) {
-  // Check if it's an external link
   const isExternal = props.href.startsWith('http') || props.href.startsWith('//');
   
   const className = [
@@ -15,7 +13,6 @@ export default function Button(props) {
     .filter(Boolean)
     .join(' ');
 
-  // Use regular <a> for external links, Link for internal navigation
   if (isExternal) {
     return (
       <a

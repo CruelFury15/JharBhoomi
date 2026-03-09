@@ -5,6 +5,13 @@ import { NavLink, useNavigate } from 'react-router-dom';
 export default function Navbar(props) {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showUserMenu, setShowUserMenu] = useState(false);
+
+  const handleLogout = () => {
+    setShowUserMenu(false);
+    props.onLogout();
+    navigate('/sign-in');
+  };
 
   return (
     <header className="navbar sticky top-0 z-50 border-b border-yellow-200 bg-white/80 backdrop-blur dark:border-yellow-800 dark:bg-yellow-950/70">
@@ -24,7 +31,6 @@ export default function Navbar(props) {
           </NavLink>
         </div>
 
-        {/* Desktop Menu */}
         <ul className="hidden items-center gap-5 text-sm font-medium text-yellow-700 md:flex dark:text-yellow-200">
           <li>
             <NavLink
@@ -106,16 +112,43 @@ export default function Navbar(props) {
           </li>
         </ul>
 
-        {/* Desktop Button */}
-        <button
-          className="hidden md:inline-flex items-center rounded-lg bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-100"
-          type="button"
-          onClick={() => navigate('/explore')}
-        >
-          Plan A Trip!
-        </button>
+        <div className="hidden md:flex items-center gap-3">
+          <button
+            className="inline-flex items-center rounded-lg bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-100"
+            type="button"
+            onClick={() => navigate('/explore')}
+          >
+            Plan A Trip!
+          </button>
+          
+          {props.userName && (
+            <div className="relative">
+              <button
+                onClick={() => setShowUserMenu(!showUserMenu)}
+                className="flex items-center gap-2 rounded-lg bg-yellow-100 px-3 py-2 text-sm font-medium text-yellow-900 hover:bg-yellow-200 dark:bg-yellow-800 dark:text-yellow-50 dark:hover:bg-yellow-700"
+              >
+                <span>{props.userName}</span>
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {showUserMenu && (
+                <div className="absolute right-0 mt-2 w-48 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-yellow-900">
+                  <div className="py-1">
+                    <button
+                      onClick={handleLogout}
+                      className="block w-full px-4 py-2 text-left text-sm text-yellow-700 hover:bg-yellow-50 dark:text-yellow-200 dark:hover:bg-yellow-800"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-yellow-700 hover:bg-yellow-100 dark:text-yellow-200 dark:hover:bg-yellow-800"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -131,7 +164,6 @@ export default function Navbar(props) {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden border-t border-yellow-200 bg-white dark:border-yellow-800 dark:bg-yellow-950">
           <ul className="space-y-1 px-4 py-3">
@@ -230,6 +262,22 @@ export default function Navbar(props) {
                 Plan A Trip!
               </button>
             </li>
+            {props.userName && (
+              <li className="pt-2 border-t border-yellow-200 dark:border-yellow-800">
+                <div className="px-3 py-2 text-sm text-yellow-700 dark:text-yellow-200">
+                  Welcome, {props.userName}
+                </div>
+                <button
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    handleLogout();
+                  }}
+                  className="w-full rounded-lg bg-yellow-100 px-3 py-2 text-base font-medium text-yellow-900 hover:bg-yellow-200 dark:bg-yellow-800 dark:text-yellow-50 dark:hover:bg-yellow-700"
+                >
+                  Logout
+                </button>
+              </li>
+            )}
           </ul>
         </div>
       )}
@@ -244,7 +292,9 @@ Navbar.propTypes = {
   head2: PropTypes.string,  
   head3: PropTypes.string,
   head4: PropTypes.string,
-  head5: PropTypes.string
+  head5: PropTypes.string,
+  userName: PropTypes.string,
+  onLogout: PropTypes.func
 };
 
 Navbar.defaultProps = {
